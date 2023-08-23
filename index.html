@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <!-- --bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        input {
+            background: #F1F1F1;
+            width: 95px;
+            height: 32px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <div>
+                    <a class="navbar-brand" href="#">Interactive</a>
+                    <p>geometry genious</p>
+                </div>
+                <div class="">
+                    <button class="btn btn-outline-success" type="submit">Blog</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="">
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <div class="">
+                        <div class="row g-3">
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3">
+                                    <img style="width: 250px; height: 150px;" src="./images/triangle.png"
+                                        class="card-img-top mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="title" class="card-title mb-2">Triangle</h3>
+                                        <p class="mb-2">Area(A)=0.5 x
+                                            <span id="base">b</span> x <span id="height">h</span>
+                                        </p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="triangleBase" type="text" placeholder="b">
+                                            <span>cm</span>
+                                            <input id="triangleHeight" type="text" placeholder="h">
+                                            <span>cm</span>
+                                        </div>
+                                        <!-- -------triangle -->
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="triangle" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3">
+                                    <img style="width: 250px; height: 150px;" src="./images/rectangle.png"
+                                        class="card-img-top w-50 mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="rectangle_title" class="card-title mb-2">rectangle</h3>
+                                        <p class="card-text mb-2">Area(A)= <span id="rectangleWidth">w</span> x <span
+                                                id="rectangleLength">l</span></p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="width" type="text" placeholder="w">
+                                            <span>cm</span>
+                                            <input id="length" type="text" placeholder="l">
+                                            <span>cm</span>
+                                        </div>
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="btn_rectangle" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3 my_custom">
+                                    <img style="width: 250px; height: 150px;" src="./images/parallelogram.png"
+                                        class="card-img-top w-50 mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="parallelogram_title" class="card-title mb-2">parallel</h3>
+                                        <p class="card-text mb-2">Area(A)= <span id="parallelogramElementB">b</span> x
+                                            <span id="parallelogramElementH">h</span>
+                                        </p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="parallelogramBase" type="text" placeholder="b">
+                                            <span>cm</span>
+                                            <input id="parallelogramHeight" type="text" placeholder="h">
+                                            <span>cm</span>
+                                        </div>
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="btn_parallelogram" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3 my_custom">
+                                    <img style="width: 250px; height: 150px;" src="./images/rhombus.png"
+                                        class="card-img-top w-50 mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="rhombusTitle" class="card-title mb-2">rhombus</h3>
+                                        <p class="card-text mb-2">Area(A)=0.5 x <span
+                                                id="rhombusElementD1">d<sub>1</sub></span> x
+                                            <span id="rhombusElementD2">d<sub>2</sub></span>
+                                        </p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="rhombusInputD1" type="text" placeholder="d1">
+                                            <span>cm</span>
+                                            <input id="rhombusInputD2" type="text" placeholder="d2">
+                                            <span>cm</span>
+                                        </div>
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="btn_rhombus" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3 my_custom">
+                                    <img style="width: 250px; height: 150px;" src="./images/pentagon.png"
+                                        class="card-img-top w-50 mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="pentagonTitle" class="card-title mb-2">pentagon</h3>
+                                        <p class="card-text mb-2">Area(A)=0.5 x <span id="pentagonElementP">p</span> x
+                                            <span id="pentagonElementB">b</span>
+                                        </p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="pentagonInputP" type="text" placeholder="p">
+                                            <span>cm</span>
+                                            <input id="pentagonInputB" type="text" placeholder="b">
+                                            <span>cm</span>
+                                        </div>
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="btn_pentagon" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                                <div class="card p-3 my_custom">
+                                    <img style="width: 250px; height: 150px;" src="./images/ellipse.png"
+                                        class="card-img-top w-50 mx-auto mb-4" alt="triangle">
+                                    <div class="card-body text-center">
+                                        <h3 id="circleTitle" class="card-title mb-2">circle</h3>
+                                        <p class="card-text mb-2">Area(A)= &Pi; x <span id="circleElementA">a</span> x
+                                            <span id="circleElementB">b</span></p>
+                                        <div class="d-flex gap-3 mb-5 justify-content-center align-items-center">
+                                            <input id="circleInputA" type="text" placeholder="a">
+                                            <span>cm</span>
+                                            <input id="circleInputB" type="text" placeholder="b">
+                                            <span>cm</span>
+                                        </div>
+                                        <div class="d-grid col-12 mx-auto">
+                                            <button id="btn_circle" class="btn btn-primary"
+                                                type="button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="card" style="height: 450px;">
+                        <div class="card-body">
+                            <h4 class="text-center fw-bold text-decoration-underline">Area calculation</h4>
+                            <table class="table">
+                                <tbody id="table_container">
+                                    <tr>
+                                        <!-- <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- --bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/geometry.js"></script>
+</body>
+
+</html>
