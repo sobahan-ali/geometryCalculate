@@ -143,3 +143,26 @@ document.getElementById('btn_circle').addEventListener('click', function () {
     table_container.appendChild(tr);
 });
 // ----------end circle area---------
+
+// start random color
+
+document.getElementById('color1').addEventListener('mouseenter', function () {
+    setColor('color1');
+})
+document.getElementById('item2').addEventListener('mouseenter', function () {
+    setColor('item2');
+});
+document.getElementById('item3').addEventListener('mouseenter', function () {
+    setColor('item3');
+});
+document.getElementById('item4').addEventListener('mouseenter', function () {
+    setColor('item4');
+});
+document.getElementById('item5').addEventListener('mouseenter', function () {
+    setColor('item5');
+});
+document.getElementById('item6').addEventListener('mouseenter', function () {
+    setColor('item6');
+});
+
+
